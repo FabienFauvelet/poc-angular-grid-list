@@ -23,7 +23,12 @@ export class GridListDynamicExample {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
   arrayOne(n: number): any[] {
-    return Array(n);
+    const labels = ['PPE','PTE','BtoC','BtoB'];
+    const array  = [ ];
+    for(let i=0; i<n; i++){
+      array.push(labels[ Math.floor(Math.random() * labels.length )]);
+    }
+    return array;
   }
 }
 

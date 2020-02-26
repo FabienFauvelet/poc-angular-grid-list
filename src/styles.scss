@@ -12,6 +12,29 @@ body {
   float: right;
   margin: 8px;
 }
+mat-grid-tile{
+  font-size:10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+  mat-grid-list{
+    width:100%
+  }
+  .month{
+    width:100%;
+    text-align: center;
+  }
+}
+.resource{
+  display: flex;
+  align-items: center;
+  width:150px;
+}
+.grid-header{
+  margin-left:150px;
+}
 
 
 /**  Copyright 2019 Google LLC. All Rights Reserved.

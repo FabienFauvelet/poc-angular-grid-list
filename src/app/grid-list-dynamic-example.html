@@ -1,37 +1,43 @@
-<mat-grid-list cols="32" rowHeight="1:1">
+<div class="line"><h1 class="month">Février</h1></div>
+<div class="line">
+  <div class="resource"></div>
+<mat-grid-list  cols="32" rowHeight="1:1">
   <mat-grid-tile
       *ngFor="let item of arrayOne(31); let i = index;"
       [colspan]="1"
       [rowspan]="1"
-      [style.background]="'#FFFFFF'">
-    {{i}}
+      [style.background]="'#AAAAAA'">
+    {{i+1}}
   </mat-grid-tile>
 </mat-grid-list>
-
-<mat-grid-list cols="31" rowHeight="200px">
-  <mat-grid-tile [style.background]="'#FF0000'">
-    <mat-grid-list cols="2" rowHeight="fit" style="width:100%">
-      <mat-grid-list cols="4" rowHeight="100px" style="width:100%">
-        <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="1"
-        [rowspan]="1"
-        [style.background]="tile.color">
-          {{tile.text}}
-        </mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list cols="2" rowHeight="100px" style="width:100%">
-        <mat-grid-tile
-          *ngFor="let item of arrayOne(2); let i = index;"
+</div>
+<div class="line">
+  <div class="resource"><p>Ma ressource</p></div>
+  <mat-grid-list cols="31" rowHeight="100px">
+    <mat-grid-tile [style.background]="'#FF0000'">
+      <mat-grid-list cols="2" rowHeight="fit" style="width:100%">
+        <mat-grid-list cols="1" rowHeight="50px" style="width:100%">
+          <mat-grid-tile
+          *ngFor="let tile of arrayOne(1)"
           [colspan]="1"
           [rowspan]="1"
-          [style.background]="'#00FFFF'">
-          {{i}}
-        </mat-grid-tile>
+          [style.background]="tile.color">
+            {{tile}}
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="2" rowHeight="50px" style="width:100%">
+          <mat-grid-tile
+            *ngFor="let tile of arrayOne(2); let i = index;"
+            [colspan]="1"
+            [rowspan]="1"
+            [style.background]="'#00FFFF'">
+            {{tile}}
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-grid-list>
-    </mat-grid-list>
-  </mat-grid-tile>
-</mat-grid-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
 
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
